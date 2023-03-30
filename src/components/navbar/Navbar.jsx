@@ -59,20 +59,19 @@
 
 // export default Navbar;
 
-
-import React from 'react';
-// import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import React, { useState } from 'react';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
 
 const Navbar = () => {
-    // const [toggleMenu, setToggleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
         <div className="gpt3__navbar">
             <div className="gpt3__navbar-links">
                 <div className="gpt3__navbar-links_logo">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} />
                 </div>
                 <div className="gpt3__navbar-links_container">
                     <p><a href="#home">Home</a></p>
@@ -86,7 +85,7 @@ const Navbar = () => {
                 <p>Sign in</p>
                 <button type="button">Sign up</button>
             </div>
-            {/* <div className="gpt3__navbar-menu">
+            <div className="gpt3__navbar-menu">
                 {toggleMenu
                     ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
                     : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
@@ -105,7 +104,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 )}
-            </div> */}
+            </div>
         </div>
     );
 };
